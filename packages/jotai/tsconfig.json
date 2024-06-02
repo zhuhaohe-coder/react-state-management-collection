@@ -1,0 +1,16 @@
+{
+    "extends": "../../tsconfig.json", // 继承根目录配置文件
+    "compilerOptions": {
+        "paths": {
+            "jotai": [
+                "./src/index.ts"
+            ],
+            "jotai/*": [
+                "./src/*.ts"
+            ],
+        },
+    },
+    "include": [
+        "src"
+    ],
+}
