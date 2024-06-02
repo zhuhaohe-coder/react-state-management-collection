@@ -15,7 +15,7 @@ jobs:
       - name: Setup pnpm
         uses: pnpm/action-setup@v2 # 设置 pnpm
         with:
-          version: 8 # 使用8版本
+          version: 9 # 使用9版本
       - name: Setup Node
         uses: actions/setup-node@v4 # 设置nodejs环境并配置pnpm缓存
         with:
