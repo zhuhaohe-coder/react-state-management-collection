@@ -4,10 +4,13 @@
   "description": "A custom implementation of zustand",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --passWithNoTests --config jest.config.ts",
+    "build": "pnpm run -w build:zustand",
+    "prepublishOnly": "pnpm run build",
+    "typecheck": "tsc"
   },
   "exports": {
-    ".":{
+    ".": {
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.mjs"
@@ -20,5 +23,12 @@
   },
   "keywords": [],
   "author": "shy",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/use-sync-external-store": "^0.0.6",
+    "zustand": "^4.5.2"
+  },
+  "dependencies": {
+    "use-sync-external-store": "^1.2.2"
+  }
 }
